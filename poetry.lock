@@ -1,40 +1,43 @@
 [[package]]
-category = "main"
-description = "ASGI specs, helper code, and adapters"
 name = "asgiref"
-optional = false
-python-versions = "*"
-version = "3.2.3"
-
-[package.extras]
-tests = ["pytest (>=4.3.0,<4.4.0)", "pytest-asyncio (>=0.10.0,<0.11.0)"]
-
-[[package]]
+version = "3.4.1"
+description = "ASGI specs, helper code, and adapters"
 category = "main"
-description = "a python2 cliapp framework"
-name = "cliapp"
-optional = false
-python-versions = "*"
-version = "1.0.9"
-
-[[package]]
-category = "main"
-description = "Use Database URLs in your Django Application."
-name = "dj-database-url"
-optional = false
-python-versions = "*"
-version = "0.5.0"
-
-[[package]]
-category = "main"
-description = "A high-level Python Web framework that encourages rapid development and clean, pragmatic design."
-name = "django"
 optional = false
 python-versions = ">=3.6"
-version = "3.0.3"
 
 [package.dependencies]
-asgiref = ">=3.2,<4.0"
+typing-extensions = {version = "*", markers = "python_version < \"3.8\""}
+
+[package.extras]
+tests = ["pytest", "pytest-asyncio", "mypy (>=0.800)"]
+
+[[package]]
+name = "cliapp"
+version = "1.0.9"
+description = "a python2 cliapp framework"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "dj-database-url"
+version = "0.5.0"
+description = "Use Database URLs in your Django Application."
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "django"
+version = "3.1.13"
+description = "A high-level Python Web framework that encourages rapid development and clean, pragmatic design."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+asgiref = ">=3.2.10,<4"
 pytz = "*"
 sqlparse = ">=0.2.2"
 
@@ -43,23 +46,23 @@ argon2 = ["argon2-cffi (>=16.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
-category = "main"
-description = "django-cors-headers is a Django application for handling the server headers required for Cross-Origin Resource Sharing (CORS)."
 name = "django-cors-headers"
+version = "3.2.1"
+description = "django-cors-headers is a Django application for handling the server headers required for Cross-Origin Resource Sharing (CORS)."
+category = "main"
 optional = false
 python-versions = ">=3.5"
-version = "3.2.1"
 
 [package.dependencies]
 Django = ">=1.11"
 
 [[package]]
-category = "main"
-description = "This is a Django library for Heroku apps."
 name = "django-heroku"
+version = "0.3.1"
+description = "This is a Django library for Heroku apps."
+category = "main"
 optional = false
 python-versions = "*"
-version = "0.3.1"
 
 [package.dependencies]
 dj-database-url = ">=0.5.0"
@@ -68,26 +71,23 @@ psycopg2 = "*"
 whitenoise = "*"
 
 [[package]]
-category = "main"
-description = "Web APIs for Django, made easy."
 name = "djangorestframework"
+version = "3.11.0"
+description = "Web APIs for Django, made easy."
+category = "main"
 optional = false
 python-versions = ">=3.5"
-version = "3.11.0"
 
 [package.dependencies]
 django = ">=1.11"
 
 [[package]]
-category = "main"
-description = "WSGI HTTP Server for UNIX"
 name = "gunicorn"
+version = "20.0.4"
+description = "WSGI HTTP Server for UNIX"
+category = "main"
 optional = false
 python-versions = ">=3.4"
-version = "20.0.4"
-
-[package.dependencies]
-setuptools = ">=3.0"
 
 [package.extras]
 eventlet = ["eventlet (>=0.9.7)"]
@@ -96,48 +96,57 @@ setproctitle = ["setproctitle"]
 tornado = ["tornado (>=0.2)"]
 
 [[package]]
-category = "main"
-description = "psycopg2 - Python-PostgreSQL Database Adapter"
 name = "psycopg2"
+version = "2.8.4"
+description = "psycopg2 - Python-PostgreSQL Database Adapter"
+category = "main"
 optional = false
 python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*"
-version = "2.8.4"
 
 [[package]]
-category = "main"
-description = "World timezone definitions, modern and historical"
 name = "pytz"
+version = "2019.3"
+description = "World timezone definitions, modern and historical"
+category = "main"
 optional = false
 python-versions = "*"
-version = "2019.3"
 
 [[package]]
-category = "main"
-description = "Non-validating SQL parser"
 name = "sqlparse"
+version = "0.3.0"
+description = "Non-validating SQL parser"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "0.3.0"
 
 [[package]]
+name = "typing-extensions"
+version = "3.10.0.2"
+description = "Backported and Experimental Type Hints for Python 3.5+"
 category = "main"
-description = "Radically simplified static file serving for WSGI applications"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "whitenoise"
+version = "5.0.1"
+description = "Radically simplified static file serving for WSGI applications"
+category = "main"
 optional = false
 python-versions = ">=3.5, <4"
-version = "5.0.1"
 
 [package.extras]
 brotli = ["brotli"]
 
 [metadata]
-content-hash = "c277b44575971f61c8cfe3b67edf07bccb254bf44dcbfb8f46878ba44e148674"
+lock-version = "1.1"
 python-versions = "^3.6"
+content-hash = "be2ae771447d0ae30fca432058f6a0fdd11ce1e1ab9fede01e664a303a08fc90"
 
 [metadata.files]
 asgiref = [
-    {file = "asgiref-3.2.3-py2.py3-none-any.whl", hash = "sha256:ea448f92fc35a0ef4b1508f53a04c4670255a3f33d22a81c8fc9c872036adbe5"},
-    {file = "asgiref-3.2.3.tar.gz", hash = "sha256:7e06d934a7718bf3975acbf87780ba678957b87c7adc056f13b6215d610695a0"},
+    {file = "asgiref-3.4.1-py3-none-any.whl", hash = "sha256:ffc141aa908e6f175673e7b1b3b7af4fdb0ecb738fc5c8b88f69f055c2415214"},
+    {file = "asgiref-3.4.1.tar.gz", hash = "sha256:4ef1ab46b484e3c706329cedeff284a5d40824200638503f5768edb6de7d58e9"},
 ]
 cliapp = [
     {file = "cliapp-1.0.9.tar.gz", hash = "sha256:4e76b6725cbdf445e8fbc7d798f264c4ae3cfb70c0fe9bd5a677435f57df2b27"},
@@ -147,8 +156,8 @@ dj-database-url = [
     {file = "dj_database_url-0.5.0-py2.py3-none-any.whl", hash = "sha256:851785365761ebe4994a921b433062309eb882fedd318e1b0fcecc607ed02da9"},
 ]
 django = [
-    {file = "Django-3.0.3-py3-none-any.whl", hash = "sha256:c91c91a7ad6ef67a874a4f76f58ba534f9208412692a840e1d125eb5c279cb0a"},
-    {file = "Django-3.0.3.tar.gz", hash = "sha256:2f1ba1db8648484dd5c238fb62504777b7ad090c81c5f1fd8d5eb5ec21b5f283"},
+    {file = "Django-3.1.13-py3-none-any.whl", hash = "sha256:a6e0d1ff11095b7394c079ade7094c73b2dc3df4a7a373c9b58ed73b77a97feb"},
+    {file = "Django-3.1.13.tar.gz", hash = "sha256:9f8be75646f62204320b195062b1d696ba28aa3d45ee72fb7c888ffaebc5bdb2"},
 ]
 django-cors-headers = [
     {file = "django-cors-headers-3.2.1.tar.gz", hash = "sha256:a5960addecc04527ab26617e51b8ed42f0adab4594b24bb0f3c33e2bd3857c3f"},
@@ -188,6 +197,11 @@ pytz = [
 sqlparse = [
     {file = "sqlparse-0.3.0-py2.py3-none-any.whl", hash = "sha256:40afe6b8d4b1117e7dff5504d7a8ce07d9a1b15aeeade8a2d10f130a834f8177"},
     {file = "sqlparse-0.3.0.tar.gz", hash = "sha256:7c3dca29c022744e95b547e867cee89f4fce4373f3549ccd8797d8eb52cdb873"},
+]
+typing-extensions = [
+    {file = "typing_extensions-3.10.0.2-py2-none-any.whl", hash = "sha256:d8226d10bc02a29bcc81df19a26e56a9647f8b0a6d4a83924139f4a8b01f17b7"},
+    {file = "typing_extensions-3.10.0.2-py3-none-any.whl", hash = "sha256:f1d25edafde516b146ecd0613dabcc61409817af4766fbbcfb8d1ad4ec441a34"},
+    {file = "typing_extensions-3.10.0.2.tar.gz", hash = "sha256:49f75d16ff11f1cd258e1b988ccff82a3ca5570217d7ad8c5f48205dd99a677e"},
 ]
 whitenoise = [
     {file = "whitenoise-5.0.1-py2.py3-none-any.whl", hash = "sha256:62556265ec1011bd87113fb81b7516f52688887b7a010ee899ff1fd18fd22700"},
